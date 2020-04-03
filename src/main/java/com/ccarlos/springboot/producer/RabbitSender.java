@@ -50,7 +50,7 @@ public class RabbitSender {
         rabbitTemplate.setReturnCallback(returnCallback);
         //id + 时间戳 全局唯一
         CorrelationData correlationData = new CorrelationData("1234567890");
-        rabbitTemplate.convertAndSend("exchange-1", "spring.abc",
+        rabbitTemplate.convertAndSend("exchange-1", "springboot.abc",
                 msg, correlationData);
     }
 
